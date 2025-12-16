@@ -1,0 +1,44 @@
+:root {
+    --main-font: "Inter-Variable", sans-serif;
+    --accent-font: "PressStart2P", fantasy;
+    --text-weight: 400;
+    --title-weight: 700;
+    --font-size: 18px;
+    --font-size-card-label: 14px;
+
+    --color: #000000;
+    --color-black: #FFFFFF;
+    --shadow-color: #FFFFFF;
+    --background-color: #FFFFFF;
+      
+    --button-font-size: 14px;
+    --button-text-color: #FFFFFF;
+
+    --main-border: 2px solid black;
+
+    --heart-contour-color: black;
+    --heart-sparks-color: red;
+
+    --background-image: 
+        repeating-linear-gradient(
+            to right,
+            #d3d3d3 0 2px,
+            transparent 2px 4px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            #d3d3d3 0 2px,
+            transparent 2px 4px
+        ),
+        linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
+    --time_step: 0.3s;
+
+    --page-width: clamp(18.75rem, 100%, 43.5rem);
+    --header-title-font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
+    --header-subtitle-font-size: clamp(0.875rem, 0rem + 6.6667vw, 1.4375rem);
+
+    /* меняем цвет лискеты при наведении на кнупку */
+    --text-color-normal: #000000;
+    --text-color-inverted: #FFFFFF;
+}

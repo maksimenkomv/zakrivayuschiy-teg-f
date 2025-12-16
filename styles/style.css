@@ -1,0 +1,363 @@
+/* Основной фон и шрифты */
+
+.page {
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--text-weight);
+  font-size: var(--font-size);
+
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Хедер и общии размеры */
+.main,
+.header {
+  width: var(--page-width);
+}
+
+.header {
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  outline: 2px solid var(--color);
+  background-color: var(--background-color);
+  padding-block: 130px;
+  margin-block: 100px;
+}
+
+.header_title {
+  font-size: var(--header-title-font-size);
+  font-weight: var(--text-weight);
+  line-height: 100%;
+  margin-block-end: 20px;
+}
+
+.header_subtitle {
+  font-size: var(--header-subtitle-font-size);
+}
+
+/* КАРТОЧКИ И КОНТЕНТ */
+.main {
+  display: grid;
+  margin-block-end: 100px;
+  justify-items: center;
+}
+
+.card_list {
+  display: grid;
+  gap: 50px;
+  width: 100%;
+}
+
+.card_item {
+  display: grid;
+  border: var(--main-border);
+  background-color: white;
+}
+
+.article {
+  outline: 2px solid var(--color);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 54px;
+}
+
+.article:last-of-type {
+  margin-bottom: 52px;
+}
+
+.article_title {
+  padding: 4px 10px;
+  font-variation-settings: "wght" var(--title-weight);
+  color: var(--color);
+  background-color: var(--background-color);
+  font-size: var(--font-size);
+  font-family: var(--main-font);
+}
+
+.article_image {
+  position: relative;
+  margin: 0px 0px 5px 0px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  max-block-size: 100%;
+}
+
+.card_label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  font-size: var(--font-size-card-label);
+  text-shadow: 0 0 1px var(--shadow-color);
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.article_info {
+  padding: 25px 25px 25px 25px;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.article_text:not(:last-of-type) {
+  margin-block-end: 20px;
+}
+
+.article_text:last-of-type {
+  margin-block-end: 20px;
+}
+
+/* Сердечко */
+.sparks {
+  opacity: 0;
+}
+
+.button_block {
+  display: flex;
+  align-self: end;
+  gap: 12px;
+}
+
+/* Кнопка "Like" (текстовая) */
+.card__like-button {
+  padding: 9px 17px 9px;
+  align-self: end;
+  width: 130px;
+}
+
+/* Кнопка с иконкой (сердце) */
+.card__icon-button {
+  height: 38px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
+  align-self: center;
+  padding-inline: 0;
+}
+
+/* Общие стили для кнопок с эффектом заливки */
+.decorated_button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid var(--color);
+  color: white;
+  cursor: pointer;
+  font-family: var(--accent-font);
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.decorated_button_text {
+  font-size: var(--button-font-size);
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 1;
+}
+
+.decorated_button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color);
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
+}
+
+.decorated_button:focus-visible {
+  outline: 2px solid var(--color);
+}
+
+.decorated_button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 1px var(--color);
+}
+
+.decorated_button:hover::before {
+  translate: 0%;
+}
+
+/* Кнопка "Сохранить на память" */
+.save_button {
+  width: 355px;
+  min-height: 55px;
+  gap: 8px;
+  display: flex;
+  font-size: var(--font-size);
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+/* Иконка дискеты внутри кнопки "Сохранить" */
+.floppy_svg {
+  width: 21px;
+  height: 21px;
+  fill: var(--color);
+  mix-blend-mode: normal;
+  position: relative;
+  z-index: 1;
+  display: block;
+  stroke: var(--color);
+  stroke-width: 2px;
+  box-sizing: border-box;
+}
+
+/* Дискета при наведении */
+
+.save_button:hover .floppy_svg,
+.save_button:focus-visible .floppy_svg {
+  fill: var(--text-color-inverted); /* Белый */
+  stroke: var(--text-color-inverted); /* Обводка также становится белой */
+  mix-blend-mode: normal;
+}
+
+/* Стилизация открытого диалогового окна */
+.floppy_dialog[open] {
+  flex-shrink: 0;
+  border: var(--main-border);
+  padding: 30px;
+  inline-size: 353px;
+  background-color: var(--background-color);
+}
+
+/* Фон модального окна */
+.floppy_dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+/* Запрет прокрутки при открытом диалоге */
+body:has(.floppy_dialog[open]) {
+  overflow: hidden;
+}
+
+/* Контейнер для иконки и текста в диалоге */
+.dialog_description {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 30px;
+  padding-top: 5px;
+}
+
+/* Иконка дискеты внутри диалога */
+.dialog_floppy_svg {
+  width: 39px;
+  height: 39px;
+  fill: var(--color);
+  flex-shrink: 0;
+  stroke: var(--color);
+  stroke-width: 2px;
+}
+
+/* Текст в диалоге */
+.dialog_label {
+  align-self: flex-start;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* Кнопка OK в диалоге */
+.dialog_button {
+  inline-size: 100%;
+  min-block-size: 38px;
+}
+
+.mix_difference {
+  fill: var(--color);
+  color: var(--color);
+  background-color: transparent;
+  mix-blend-mode: difference;
+}
+
+/* Поддержка text-stroke */
+@supports (
+  (text-stroke: 1px var(--shadow-color)) or
+    (-webkit-text-stroke: 1px var(--shadow-color))
+) {
+  .card_label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+  }
+}
+
+/* Медиа запрос 375 */
+
+@media (width <= 375px) {
+  .main,
+  .header,
+  .footer {
+    width: 100%;
+  }
+
+  .header {
+    margin-top: 27vw;
+    margin-bottom: 28vw;
+    block-size: 325px;
+  }
+
+  .header_title {
+    line-height: 49px;
+    letter-spacing: normal;
+  }
+
+  .article_info {
+    padding: 20px 27px 25px 27px;
+  }
+
+  .card_label {
+    top: 20px;
+    right: 10px;
+  }
+
+  /* Стилизация кнопки "Сохранить на память" для мобильной версии */
+  .save_button {
+    flex-direction: column;
+    width: 312px;
+    height: 84px;
+    margin: 0 auto;
+    gap: 4px;
+  }
+
+  .floppy_svg {
+    width: 21px;
+    height: 21px;
+    margin-right: 0;
+  }
+
+  .decorated_button_text {
+    margin-right: 2px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+}
