@@ -1,5 +1,4 @@
 /* Основной фон и шрифты */
-
 .page {
   font-family: var(--main-font);
   font-variation-settings: "wght" var(--text-weight);
@@ -47,7 +46,7 @@
   font-size: var(--header-subtitle-font-size);
 }
 
-/* КАРТОЧКИ И КОНТЕНТ */
+/* Карточки и контент */
 .main {
   display: grid;
   margin-block-end: 100px;
@@ -215,8 +214,7 @@
 .floppy_svg {
   width: 21px;
   height: 21px;
-  /* Используем currentColor, чтобы иконка красилась в цвет текста кнопки */
-  fill: currentColor; 
+  fill: currentColor;
   position: relative;
   z-index: 1;
   display: block;
@@ -224,24 +222,17 @@
 }
 
 /* Дискета при наведении */
-
-/* Ховер-эффект для иконки */
 .save_button:hover .floppy_svg,
 .save_button:focus-visible .floppy_svg {
-  /* Благодаря mix-blend-mode: difference в .decorated_button_text 
-     и currentColor тут, иконка станет видимой на фоне заливки */
-  color: var(--background-color); 
+  color: var(--background-color);
 }
-
 
 /* Стилизация открытого диалогового окна */
 .dialog_floppy_svg {
   width: 39px;
   height: 39px;
-  /* Добавьте это, чтобы иконка не сжималась до 0 при длинном тексте */
-  flex-shrink: 0; 
-  /* Цвет иконки (черный, как на макете) */
-  fill: var(--color, #000); 
+  flex-shrink: 0;
+  fill: var(--color, #000);
 }
 
 /* Фон модального окна */
@@ -253,29 +244,30 @@
 body:has(.floppy_dialog[open]) {
   overflow: hidden;
 }
+
 .floppy_dialog[open] {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 30px;
-  width: 357px; /* фиксированная ширина как на макете */
-  background-color: var(--background-color); /* белый */
-  border: 2px solid var(--color); /* черная рамка */
+  width: 357px;
+  background-color: var(--background-color);
+  border: 2px solid var(--color);
 }
 
 /* Контейнер для иконки и текста в диалоге */
 .dialog_description {
-  display: flex; /* Выстраивает иконку и текст в ряд */
-  align-items: center; /* Центрирует их по вертикали */
-  gap: 21px; /* Расстояние между дискетой и текстом */
+  display: flex;
+  align-items: center;
+  gap: 21px;
 }
 
 /* Иконка дискеты внутри диалога */
 .dialog_floppy_svg {
   width: 39px;
   height: 39px;
-  flex-shrink: 0; /* Не дает тексту сжимать иконку */
-  fill: #000; /* Или currentColor */
+  flex-shrink: 0;
+  fill: #000;
 }
 
 /* Текст в диалоге */
@@ -300,7 +292,7 @@ body:has(.floppy_dialog[open]) {
   mix-blend-mode: difference;
 }
 
-.footer{
+.footer {
   padding: 20px 20px 20px 20px;
 }
 
@@ -317,52 +309,109 @@ body:has(.floppy_dialog[open]) {
 }
 
 /* Медиа запрос 375 */
-
 @media (width <= 375px) {
-  .main,
-  .header,
-  .footer {
-    width: 100%;
+  /* Сброс */
+  html,
+  body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+  }
+
+  .page {
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Шапка */
   .header {
-    margin-top: 27vw;
-    margin-bottom: 28vw;
-    block-size: 325px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    padding: 120px 0 !important;
+    outline-offset: -2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
-  .header_title {
-    line-height: 49px;
-    letter-spacing: normal;
+  .header_subtitle {
+    font-size: var(--header-subtitle-font-size);
+  }
+
+  /* Карточки и контент */
+  .main {
+    width: 100% !important;
+    padding-inline: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+
+  .article {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    outline-offset: -2px !important;
+  }
+
+  .article img,
+  .article_image {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    border-top: 2px solid var(--color) !important;
+    border-bottom: 1px solid var(--color) !important;
+    margin: 0 !important;
+  }
+
+  .article_title {
+    padding: 10px 20px !important;
+    width: 100% !important;
+    border-bottom: 2px solid var(--color);
+    word-break: break-word !important;
   }
 
   .article_info {
-    padding: 20px 27px 25px 27px;
+    padding: 20px !important;
   }
 
-  .card_label {
-    top: 20px;
-    right: 10px;
-  }
-
-  /* Стилизация кнопки "Сохранить на память" для мобильной версии */
+  /* Сохранить */
   .save_button {
-    flex-direction: column;
-    width: 312px;
-    height: 84px;
-    margin: 0 auto;
-    gap: 4px;
+    flex-direction: column !important;
+    width: calc(100% - 40px) !important;
+    max-width: 335px !important;
+    margin: 30px auto !important;
+    padding: 15px !important;
   }
 
   .floppy_svg {
-    width: 21px;
-    height: 21px;
-    margin-right: 0;
+    width: 28px !important;
+    height: 28px !important;
+    margin: 0 0 10px 0 !important;
   }
 
-  .decorated_button_text {
-    margin-right: 2px;
-    margin-bottom: 4px;
-    text-align: center;
+  /* Футер */
+  .footer {
+    width: 100% !important;
+    padding: 30px 0 !important;
+    text-align: center !important;
   }
 }
