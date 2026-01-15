@@ -1,37 +1,35 @@
 /* Основной фон и шрифты */
 .page {
-  font-family: var(--main-font);
-  font-weight: var(--text-weight);
-  font-variation-settings: "wght" var(--text-weight);
-  font-size: var(--font-size);
-
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  margin: auto;
+  font-family: var(--main-font);
+  font-weight: var(--text-weight);
+  font-size: var(--font-size);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-variation-settings: "wght" var(--text-weight);
 }
 
 /* Хедер */
 .header {
-  font-family: var(--accent-font);
-  font-weight: var(--text-weight);
-  outline: 2px solid var(--color);
-  background-color: var(--background-color);
-  padding: 130px 0;
-  margin-top: 100px;
-  margin-bottom: 98px;
-  width: var(--page-width);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: var(--page-width);
+  margin-top: 100px;
+  margin-bottom: 98px;
+  padding: 130px 0;
+  outline: 2px solid var(--color);
+  font-family: var(--accent-font);
+  font-weight: var(--text-weight);
+  background-color: var(--background-color);
 }
 
 .header_title {
@@ -49,13 +47,13 @@
   display: flex;
   flex-direction: column;
   gap: 51px;
-  width: var(--card_list);  
+  width: var(--card_list);
 }
 
 .article {
+  margin-bottom: 50px;
   outline: 2px solid var(--color);
   background-color: white;
-  margin-bottom: 50px;
 }
 
 .article:last-of-type {
@@ -65,24 +63,25 @@
 .article_title {
   padding: 4px 10px;
   color: var(--color);
-  background-color: var(--background-color);
-  font-size: var(--font-size);
   font-family: var(--main-font);
   font-weight: var(--title-weight);
+  font-size: var(--font-size);
+  background-color: var(--background-color);
   font-variation-settings: "wght" var(--title-weight);
 }
+
 .article_info {
-  padding: 27px 27px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding: 27px;
 }
 
 .article_text {
   font-family: var(--main-font);
   font-weight: var(--text-weight);
-  font-variation-settings: "wght" var(--text-weight);
   line-height: 21px;
+  font-variation-settings: "wght" var(--text-weight);
 }
 
 .article_image {
@@ -95,45 +94,32 @@
   display: block;
   width: 100%;
   height: auto;
-
-  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 97%;
+  aspect-ratio: 1 / 1;
   inline-size: 100%;
 }
 
-.image-grayscale {
-  filter: grayscale(0.75);
-}
-.image-saturate {
-  filter: saturate(288%);
-}
-.image-hue-rotate {
-  filter: hue-rotate(28deg);
-}
-.image-invert {
-  filter: invert(0.75);
-}
-
-.image-blur {
-  filter: blur(7px);
-}
-.image-fiter-mix {
-  filter: hue-rotate(90deg) opacity(0.7) blur(1.4px);
-}
+/* Эффекты изображений */
+.image-grayscale { filter: grayscale(0.75); }
+.image-saturate { filter: saturate(288%); }
+.image-hue-rotate { filter: hue-rotate(28deg); }
+.image-invert { filter: invert(0.75); }
+.image-blur { filter: blur(7px); }
+.image-fiter-mix { filter: hue-rotate(90deg) opacity(0.7) blur(1.4px); }
 
 .card_label {
   position: absolute;
   top: 25px;
   right: 25px;
+  z-index: 1;
+  opacity: 0.6;
   font-family: var(--accent-font);
   font-weight: var(--text-weight);
   font-size: var(--font-size-card-label);
-  text-shadow: 0 0 1px var(--shadow-color);
   text-transform: uppercase;
+  text-shadow: 0 0 1px var(--shadow-color);
   mix-blend-mode: hard-light;
-  opacity: 0.6;
-  z-index: 1;
 }
 
 /* Кнопки Like */
@@ -145,42 +131,42 @@
 
 .card__icon-button {
   display: flex;
-  background-color: transparent;
-  border: none;
-  outline: 2px solid transparent;
-  transition: outline 0.3s ease;
   align-items: center;
-  padding: 0;
-  cursor: pointer;
+  border: none;
   border-radius: 2px;
+  padding: 0;
+  outline: 2px solid transparent;
+  background-color: transparent;
+  transition: outline 0.3s ease;
+  cursor: pointer;
 }
 
 .card__like-button {
-  padding: 9px 17px;
-  height: 38px;
   width: 130px;
+  height: 38px;
+  padding: 9px 17px;
 }
 
 /* Общие стили кнопок */
 .decorated_button {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border: 2px solid var(--color);
-  color: white;
-  cursor: pointer;
-  font-family: var(--accent-font);
-  justify-content: center;
-  overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--color);
+  overflow: hidden;
+  color: white;
+  font-family: var(--accent-font);
+  background-color: white;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .decorated_button_text {
-  font-size: var(--button-font-size);
-  mix-blend-mode: difference;
   position: relative;
   z-index: 1;
+  font-size: var(--button-font-size);
+  mix-blend-mode: difference;
 }
 
 .decorated_button::before {
@@ -197,8 +183,8 @@
 }
 
 .decorated_button:focus {
+
   outline: none;
-  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decorated_button:hover::before {
@@ -213,52 +199,42 @@
 }
 
 .save_button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   width: 335px;
   min-height: 55px;
-  gap: 8px;
-  display: flex;
-  font-size: var(--font-size);
-  align-items: center;
-  justify-content: center;
   color: white;
-  position: relative;
-}
-
-.button_content {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
+  font-size: var(--font-size);
 }
 
 .floppy_svg {
+  position: relative;
+  z-index: 1;
   width: 21px;
   height: 21px;
   fill: currentColor;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  mix-blend-mode: difference;
   transition: transform var(--time-step) ease-in-out;
+  mix-blend-mode: difference;
 }
 
 /* Диалог */
 .floppy_dialog[open] {
-  display: flex;
-  flex-direction: column;
-  gap: 31px;
-  padding: 30px;
-  width: 353px;
-  background-color: var(--background-color);
-  border: 2px solid var(--color);
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  width: 353px;
+  margin: 0;
+  border: 2px solid var(--color);
+  padding: 30px;
+  background-color: var(--background-color);
+  transform: translate(-50%, -50%);
 }
 
 .floppy_dialog::backdrop {
@@ -272,17 +248,17 @@
 }
 
 .dialog_floppy_svg {
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
-  flex-shrink: 0;
 }
 
 .dialog_label {
+  color: var(--color);
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
-  color: var(--color);
 }
 
 .dialog_button {
@@ -305,54 +281,32 @@
 /* Медиа-запрос для мобильных */
 @media (width <= 375px) {
   .header {
-    margin-top: 100px;
     margin-bottom: 100px;
-    padding: 120px 0;
-    outline: 2px solid var(--color);
-    border-left: 2px solid var(--color);
     border-right: 2px solid var(--color);
+    border-left: 2px solid var(--color);
+    padding: 120px 0;
+    background-color: white;
   }
 
   .article {
-    outline: 2px solid var(--color);
-    background-color: white;
     margin-top: 8px;
-    margin-bottom: 50px;
-    border-left: 2px solid var(--color);
     border-right: 2px solid var(--color);
+    border-left: 2px solid var(--color);
   }
 
   .article_info {
     padding: 26px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
   }
 
   .card_list {
-    display: flex;
-    flex-direction: column;
     gap: 49px;
-    width: var(--card_list);
-  }
-
-  .save_container {
-    margin: 50px 0;
   }
 
   .save_button {
+    flex-direction: column;
     width: 306px;
     height: 84px;
     min-height: auto;
-
-    flex-direction: column;
-  }
-
-  .button_content {
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
   }
 
   .floppy_svg {
