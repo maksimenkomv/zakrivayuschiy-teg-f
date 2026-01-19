@@ -368,7 +368,7 @@ button:focus-visible {
     margin-bottom: 100px;
     border-right: 2px solid var(--color);
     border-left: 2px solid var(--color);
-    padding: 118px 0;
+    padding: 120px 0;
   }
 
   .article {
@@ -377,11 +377,16 @@ button:focus-visible {
   }
 
   .article_info {
-    padding: 26px 25px;
+    padding: 24px 28px;
+    
   }
-
+  .article_text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
   .card_list {
-    gap: 49px; 
+    gap: 49px;
   }
 
   .save_button {
