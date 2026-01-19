@@ -2,7 +2,6 @@
   --main-font: "Inter-Variable", "Arial", sans-serif;
   --accent-font: "PressStart2P", "Arial", sans-serif;
   
-  /* Точные числовые значения из макета Figma */
   --text-weight: 410;
   --title-weight: 715;
   
@@ -10,16 +9,26 @@
   --font-size-card-label: 14px;
 
   --color: #000000;
-  --color-black: #ffffff;
   --shadow-color: #ffffff;
   --background-color: #ffffff;
+  --accent-color: #000000;
+  --main-text-color: #f1b2ce;
+  --nav-color: #000000;
+  --main-heading-color: #000028;
+  
+  /* Цвета сердечка */
+  --heart-contour-color: #000000;
+  --heart-sparks-color: #ff0000;
 
-  --button-font-size: 14px;
+  /* Дополнительные цветовые переменные */
   --button-text-color: #ffffff;
+  --text-color-normal: #000000;
+  --text-color-inverted: #ffffff;
 
-  --heart-contour-color: black;
-  --heart-sparks-color: red;
+  /* Размеры кнопок */
+  --button-font-size: 14px;
 
+  /* Фоны */
   --background-image: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -28,14 +37,12 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
+  /* Анимации */
   --time-step: 0.3s;
 
+  /* Адаптивные значения */
   --page-width: clamp(375px, 16.29rem + 30.52vw, 700px);
-  --card_list: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+  --card-list-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   --header-title-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   --header-subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
-
-  /* Цвета для инверсии текста и элементов */
-  --text-color-normal: #000000;
-  --text-color-inverted: #ffffff;
 }
