@@ -387,6 +387,7 @@ button:focus-visible {
   }
   .card_list {
     gap: 49px;
+    width: var(--card-list-width);
   }
 
   .save_button {
