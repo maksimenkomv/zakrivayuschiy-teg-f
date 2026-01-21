@@ -95,10 +95,3 @@
 .like-icon.is-liked .sparks {
     animation: sparks-appear 0.3s ease-in 0.3s 1 alternate;
 }
-
-/* Стили для кнопок */
-.card__icon-button:focus-visible {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
-    transition: outline 0.3s linear;
-}
