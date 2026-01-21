@@ -12,7 +12,7 @@
   background-size: cover;
   background-attachment: fixed;
   font-variation-settings: "wght" var(--text-weight);
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 /* Хедер */
@@ -330,8 +330,8 @@ button:focus-visible {
 
 .dialog_floppy_svg {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 39px;
+  height: 39px;
   fill: currentColor
 }
 

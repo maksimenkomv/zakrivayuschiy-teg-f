@@ -98,7 +98,7 @@
 
 /* Стили для кнопок */
 .card__icon-button:focus-visible {
-    outline: 2px solid var(--accent-color, #00cc14);
+    outline: 2px solid var(--accent-color);
     outline-offset: 2px;
     transition: outline 0.3s linear;
 }
