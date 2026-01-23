@@ -59,6 +59,7 @@
     fill: var(--heart-sparks-color);
   }
   
+  
   /* Задержки для плавности состояния is-liked */
   .like-icon.is-liked .core {
     transition: fill 0.3s linear 0.03s;

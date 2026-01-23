@@ -105,7 +105,7 @@ button {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  outline: 2px solid var(--color);
+  /*outline: 2px solid var(--color);*/
   outline-offset: -2px; /* Втягивает линию внутрь блока */
 }
 
@@ -128,7 +128,9 @@ button {
   text-transform: uppercase;
   text-shadow: 0 0 1px var(--shadow-color);
   mix-blend-mode: hard-light;
-}
+  -webkit-text-stroke: 1px var(--shadow-color);
+  text-stroke: 1px var(--shadow-color);
+ }
 
 .button_block {
   display: flex;
