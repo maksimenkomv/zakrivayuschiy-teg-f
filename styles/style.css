@@ -218,7 +218,6 @@ button {
   z-index: 1;
   width: 21px;
   height: 21px;
-  fill: currentColor;
 }
 
 .save_container {
@@ -258,7 +257,7 @@ button {
   flex-shrink: 0;
   width: 39px;
   height: 39px;
-color: var(--color);
+  fill: currentColor;
 }
 
 .dialog_label {
