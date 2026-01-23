@@ -218,7 +218,8 @@ button {
   z-index: 1;
   width: 21px;
   height: 21px;
- fill: currentColor;
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .save_container {
