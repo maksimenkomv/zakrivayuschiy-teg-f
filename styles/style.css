@@ -218,7 +218,7 @@ button {
   z-index: 1;
   width: 21px;
   height: 21px;
-  color: var(--color);
+  color: var( --accent-color);
 }
 
 .save_container {
