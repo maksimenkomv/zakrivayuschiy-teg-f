@@ -258,7 +258,7 @@ button {
   flex-shrink: 0;
   width: 39px;
   height: 39px;
-
+color: var(--color);
 }
 
 .dialog_label {
