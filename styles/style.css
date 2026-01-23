@@ -36,7 +36,7 @@ button {
   margin-bottom: 98px;
   padding: 132px 0;
   outline: 2px solid var(--color);
-  outline-offset: -2px; /* Втягивает линию внутрь блока */
+  outline-offset: -2px;
   background-color: var(--background-color);
   font-family: var(--accent-font);
 }
@@ -64,7 +64,7 @@ button {
 
 .article {
   outline: 2px solid var(--color);
-  outline-offset: -2px; /* Втягивает линию внутрь блока */
+  outline-offset: -2px;
   background-color: var(--background-color);
 }
 
@@ -96,8 +96,8 @@ button {
 .article_image {
   position: relative;
   display: block;
-  outline-offset: -2px; /* Втягивает линию внутрь изображения */
-  border: 2px solid var(--color)
+  outline-offset: -2px;
+  border: 2px solid var(--color);
 }
 
 .article_image img {
@@ -105,17 +105,28 @@ button {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  /*outline: 2px solid var(--color);*/
-  outline-offset: -2px; /* Втягивает линию внутрь блока */
+  outline-offset: -2px;
 }
 
 /* Фильтры изображений */
-.image-grayscale { filter: grayscale(0.75); }
-.image-saturate { filter: saturate(288%); }
-.image-hue-rotate { filter: hue-rotate(28deg); }
-.image-invert { filter: invert(0.75); }
-.image-blur { filter: blur(7px); }
-.image-fiter-mix { filter: hue-rotate(90deg) opacity(0.7) blur(1.4px); }
+.image-grayscale {
+  filter: grayscale(0.75);
+}
+.image-saturate {
+  filter: saturate(288%);
+}
+.image-hue-rotate {
+  filter: hue-rotate(28deg);
+}
+.image-invert {
+  filter: invert(0.75);
+}
+.image-blur {
+  filter: blur(7px);
+}
+.image-fiter-mix {
+  filter: hue-rotate(90deg) opacity(0.7) blur(1.4px);
+}
 
 .card_label {
   position: absolute;
@@ -130,7 +141,7 @@ button {
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px var(--shadow-color);
   text-stroke: 1px var(--shadow-color);
- }
+}
 
 .button_block {
   display: flex;
@@ -153,7 +164,9 @@ button {
   transition: 0.5s ease-in-out;
 }
 
-.decorated_button:focus { outline: none; }
+.decorated_button:focus {
+  outline: none;
+}
 
 .decorated_button:focus-visible {
   outline: 2px solid var(--accent-color);
@@ -169,7 +182,9 @@ button {
   transform: translateX(-100%);
 }
 
-.decorated_button:hover::before { transform: translateX(0); }
+.decorated_button:hover::before {
+  transform: translateX(0);
+}
 
 .button__text {
   position: relative;
@@ -208,7 +223,9 @@ button {
   height: 38px;
 }
 
-.card__icon-button:focus { outline: none; }
+.card__icon-button:focus {
+  outline: none;
+}
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
@@ -245,7 +262,9 @@ button {
   background-color: var(--background-color);
 }
 
-.floppy_dialog[open] { display: flex; }
+.floppy_dialog[open] {
+  display: flex;
+}
 
 .floppy_dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
@@ -274,7 +293,7 @@ button {
 /* Адаптив */
 @media (width <= 375px) {
   .header {
-    width: 100%; /* Убираем calc, так как outline-offset всё исправил */
+    width: 100%;
     padding: 124px 0;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -282,18 +301,17 @@ button {
 
   .card_list {
     width: 100%;
-    padding:50px 0;
+    padding: 50px 0;
   }
 
   .article_info {
     padding: 25px;
   }
 
-  
   .article_title {
     padding: 6px 10px;
   }
-  
+
   .article_info {
     display: flex;
     flex-direction: column;
@@ -304,12 +322,12 @@ button {
   .save_container {
     display: flex;
     justify-content: center;
-    margin-top:0;
+    margin-top: 0;
   }
 
   .save_button {
     flex-direction: column;
-    width: 310px; 
+    width: 310px;
     height: 84px;
   }
 
